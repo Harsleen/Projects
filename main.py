@@ -1,6 +1,10 @@
 import random
 import string
 
+#list
+# loop
+# bool
+
 # Function to generate a random password with specified length and criteria
 def generate_password(length, use_uppercase, use_lowercase, use_digits, use_special_chars):
     # Define character sets for each criteria
@@ -20,7 +24,11 @@ def generate_password(length, use_uppercase, use_lowercase, use_digits, use_spec
     return password
 
 # Main program
-if __name__ == "__main__":
+def main():
+    # empty list of passwords
+    listOfPasswords = []
+    # boolean to check if the user wants to try again
+    tryAgain = True
     print("Welcome to the Password Generator!")
     length = int(input("Enter the length of the password: "))
     use_uppercase = input("Include uppercase letters? (yes/no): ").lower() == "yes"
@@ -31,4 +39,14 @@ if __name__ == "__main__":
     password = generate_password(length, use_uppercase, use_lowercase, use_digits, use_special_chars)
 
     print(f"Your generated password is: {password}")
+    listOfPasswords.append(password)
+    for x in listOfPasswords:
+      print("list of passwords: " + x)
+    retry = input("Do you want to try again? (yes/no): ").lower()
+    if retry == "yes":
+      main()
+    else:
+      print("Thank you for using the Password Generator!")
+
+main()
   
