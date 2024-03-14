@@ -1,0 +1,32 @@
+  #include <iostream>
+
+  // Function declaration
+  int addNumbers(int a, int b);
+
+  int main() {
+      // Creating variables with data types
+      int num1 = 5;
+      float num2 = 2.5;
+      char character = 'A';
+
+      // Conditional statement
+      if (num1 > num2) {
+          std::cout << "num1 is greater than num2" << std::endl;
+      } else {
+          std::cout << "num1 is not greater than num2" << std::endl;
+      }
+
+      // Function call
+      int sum = addNumbers(num1, static_cast<int>(num2));
+      std::cout << "Sum of num1 and num2 (after type casting): " << sum << std::endl;
+
+      // The following line prints the value of the character variable
+      std::cout << "Character: " << character << std::endl;
+
+      return 0;
+  }
+
+  // Function definition
+  int addNumbers(int a, int b) {
+      return a + b;
+  }
